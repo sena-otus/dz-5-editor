@@ -8,6 +8,7 @@ Line::Line(v2d && start, v2d && end)
 }
 
 
+// here follows boost serialization magic:
 #include "serialize_archive.h"
 
 BOOST_CLASS_EXPORT_IMPLEMENT(Line)

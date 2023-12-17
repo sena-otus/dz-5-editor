@@ -15,13 +15,13 @@ void Sketch::addCircle(v2d &&center, const double R)
   m_items.push_back(std::make_shared<Circle>(std::forward<v2d>(center), R));
 }
 
-void Sketch::delLine()
+void Sketch::delFirst()
 {
   if(m_items.empty()) {m_items.pop_back();}
 }
 
 
-
+// here follows boost serialization magic:
 #include "serialize_archive.h"
 
 BOOST_CLASS_EXPORT_IMPLEMENT(Sketch)

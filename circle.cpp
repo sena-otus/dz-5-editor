@@ -8,6 +8,7 @@ Circle::Circle(v2d && center, const double R)
 }
 
 
+// here follows boost serialization magic:
 #include "serialize_archive.h"
 
 BOOST_CLASS_EXPORT_IMPLEMENT(Circle)

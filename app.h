@@ -11,13 +11,12 @@ public:
   App()
     : m_menu(), m_sketch()
   {
-//    m_menu.addItem("Set filename"     , [this] {setFileName ();});
     m_menu.addItem("Create new sketch", [this] {createNew   ();});
     m_menu.addItem("Import sketch"    , [this] {importSketch();});
     m_menu.addItem("Export sketch"    , [this] {exportSketch();});
     m_menu.addItem("Add line"         , [this] {addLine     ();});
     m_menu.addItem("Add circle"       , [this] {addCircle   ();});
-    m_menu.addItem("Delete line"      , [this] {delLine     ();});
+    m_menu.addItem("Delete first"     , [this] {delFirst    ();});
     m_menu.addItem("Exit"             , [this] {appexit     ();});
   }
 
@@ -38,13 +37,13 @@ public:
 
   void addCircle()
   {
-      // TODO: get line coors from user
+      // TODO: get circle coors from user
     m_sketch.addCircle(v2d{.x=10,.y=10}, 15);
   }
 
-  void delLine()
+  void delFirst()
   {
-    m_sketch.delLine();
+    m_sketch.delFirst();
   }
 
 

@@ -16,7 +16,7 @@ public:
   void clear() {m_items.clear();}
   void addLine(v2d && start, v2d && end);
   void addCircle(v2d && center, double R);
-  void delLine();
+  void delFirst();
 
   friend class boost::serialization::access;
   template<class Archive>
