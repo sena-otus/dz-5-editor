@@ -5,6 +5,17 @@
 #include <boost/archive/text_iarchive.hpp>
 #include <fstream>
 
+App::App()
+    : m_menu(), m_sketch()
+{
+  m_menu.addItem("Create new sketch", [this] {createNew   ();});
+  m_menu.addItem("Import sketch"    , [this] {importSketch();});
+  m_menu.addItem("Export sketch"    , [this] {exportSketch();});
+  m_menu.addItem("Add line"         , [this] {addLine     ();});
+  m_menu.addItem("Add circle"       , [this] {addCircle   ();});
+  m_menu.addItem("Delete last"      , [this] {delLast     ();});
+  m_menu.addItem("Exit"             , [this] {appexit     ();});
+}
 
 void App::importSketch()
 {
