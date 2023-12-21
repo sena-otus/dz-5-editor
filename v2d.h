@@ -2,10 +2,9 @@
 
 struct v2d
 {
-  double x;
-  double y;
+  int x{0};
+  int y{0};
 };
-
 
 
 namespace boost {
