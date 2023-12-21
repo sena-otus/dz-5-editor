@@ -4,11 +4,15 @@
 #include <boost/serialization/base_object.hpp>
 #include "item2d.h"
 
+class AbstractCanvas;
+
 class Line : public Item2d
 {
 public:
-  Line() = default;
-  Line(v2d && start, v2d && end);
+  Line() : Item2d(0) {};
+  Line(v2d && start, v2d && end, int lineColor);
+
+  void draw(AbstractCanvas &ac) const override;
 
   friend class boost::serialization::access;
   template<class Archive>

@@ -1,10 +1,16 @@
+#include "abstractcanvas.h"
 #include "circle.h"
 
-Circle::Circle(v2d && center, const double R)
-  : Item2d(std::forward<v2d>(center)),
-    m_center(base()),
+Circle::Circle(v2d && center, const int R, const int lineColor)
+  : Item2d(lineColor),
+    m_center(center),
     m_R(R)
 {
+}
+
+void Circle::draw(AbstractCanvas &ac) const
+{
+  ac.drawCircle(m_center.x, m_center.y, m_R, lineColor());
 }
 
 

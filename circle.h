@@ -4,11 +4,15 @@
 #include <boost/serialization/base_object.hpp>
 #include "item2d.h"
 
+class AbstractCanvas;
+
 class Circle : public Item2d
 {
 public:
-  Circle() = default;
-  Circle(v2d && center, double R);
+  explicit Circle() : Item2d(0) {};
+  Circle(v2d && center, int R, int lineColor);
+
+  void draw(AbstractCanvas &ac) const override;
 
   friend class boost::serialization::access;
   template<class Archive>
@@ -21,7 +25,7 @@ public:
 
 private:
    v2d m_center{};
-   double m_R{};
+   int m_R{};
 };
 
 BOOST_CLASS_EXPORT_KEY(Circle);
