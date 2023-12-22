@@ -17,7 +17,7 @@ App::App()
   m_menu.addItem("Export sketch"    , [this] {exportSketch();});
   m_menu.addItem("Add line"         , [this] {addLine     ();});
   m_menu.addItem("Add circle"       , [this] {addCircle   ();});
-  m_menu.addItem("Delete last"      , [this] {delLast     ();});
+  m_menu.addItem("Delete last added", [this] {delLast     ();});
   m_menu.addItem("Exit"             , [this] {appexit     ();});
   m_tcanvasptr = std::make_shared<TextCanvas>();
   m_sketch.setCanvas(m_tcanvasptr);
