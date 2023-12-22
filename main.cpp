@@ -17,7 +17,7 @@ int main(int, char const *[])
 {
   try
   {
-    App app;
+    AppCtrl app;
     app.run();
   }
   catch(const std::exception &e)

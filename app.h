@@ -8,10 +8,10 @@
 #include <random>
 
 /** @brief controller class */
-class App
+class AppCtrl
 {
 public:
-  App();
+  AppCtrl();
 
   int randomInt();
 
