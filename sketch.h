@@ -12,7 +12,7 @@
 class Item2d;
 class AbstractCanvas;
 
-class Sketch
+class SketchModel
 {
 public:
   void clear() {m_items.clear();}

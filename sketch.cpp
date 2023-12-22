@@ -6,32 +6,32 @@
 #include <utility>
 
 
-void Sketch::addLine(v2d &&start, v2d &&end, const int lineColor)
+void SketchModel::addLine(v2d &&start, v2d &&end, const int lineColor)
 {
   m_items.push_back(std::make_shared<Line>(std::forward<v2d>(start), std::forward<v2d>(end), lineColor));
 }
 
 
-void Sketch::addCircle(v2d &&center, const double R, const int lineColor)
+void SketchModel::addCircle(v2d &&center, const double R, const int lineColor)
 {
   m_items.push_back(std::make_shared<Circle>(std::forward<v2d>(center), R, lineColor));
 }
 
 
-void Sketch::setCanvas(std::shared_ptr<AbstractCanvas> acp)
+void SketchModel::setCanvas(std::shared_ptr<AbstractCanvas> acp)
 {
   m_acp = std::move(acp);
 }
 
 
-void Sketch::draw() const
+void SketchModel::draw() const
 {
   m_acp->drawCaption();
   std::for_each(m_items.begin(), m_items.end(), [this](const auto &item){item->draw(*m_acp);});
 }
 
 
-void Sketch::delLast()
+void SketchModel::delLast()
 {
   if(!m_items.empty()) {m_items.pop_back();}
 }
@@ -40,4 +40,4 @@ void Sketch::delLast()
 // here follows boost serialization magic:
 #include "serialize_archive.h"
 
-BOOST_CLASS_EXPORT_IMPLEMENT(Sketch)
+BOOST_CLASS_EXPORT_IMPLEMENT(SketchModel)
