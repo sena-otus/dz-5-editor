@@ -5,6 +5,7 @@
 #include "sketch.h"
 #include "menu.h"
 #include <functional>
+#include <random>
 
 /** @brief controller class */
 class App
@@ -12,44 +13,23 @@ class App
 public:
   App();
 
-  void createNew()
-  {
-    m_sketch.clear();
-  }
+  int randomInt();
+
+  void createNew();
 
   void importSketch();
 
   void exportSketch();
 
-  void addLine()
-  {
-      // TODO: get line coors from user
-    m_sketch.addLine(v2d{.x=1,.y=1}, v2d{.x=0,.y=0}, 1);
-  }
+  void addLine();
 
-  void addCircle()
-  {
-      // TODO: get circle coors from user
-    m_sketch.addCircle(v2d{.x=10,.y=10}, 15, 2);
-  }
+  void addCircle();
 
-  void delLast()
-  {
-    m_sketch.delLast();
-  }
+  void delLast();
 
-  void appexit()
-  {
-    m_exitFlag = true;
-  }
+  void appexit();
 
-  void run()
-  {
-    while(!m_exitFlag) {
-      m_sketch.draw();
-      m_menu.show();
-    }
-  }
+  void run();
 
 private:
   Menu m_menu;
@@ -57,4 +37,7 @@ private:
   std::shared_ptr<TextCanvas> m_tcanvasptr;
   Sketch m_sketch;
   bool m_exitFlag{false};
+  std::random_device m_rd;     // Only used once to initialise (seed) engine
+  std::mt19937 m_rng;    // Random-number engine used (Mersenne-Twister in
+  std::uniform_int_distribution<int> m_uniDistr;
 };

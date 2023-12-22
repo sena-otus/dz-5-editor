@@ -12,10 +12,13 @@ unsigned Menu::addItem(std::string &&itemtext, const CB &callback)
 
 void Menu::show()
 {
+  std::cout << "\nMenu\n";
+  std::cout << "****\n";
   for(unsigned ii = 0; ii < m_item.size(); ++ii)
   {
     std::cout << ii << ": " << m_item[ii].first << "\n";
   }
+  std::cout << "Input number: ";
   unsigned itemNum = m_item.size();
   do {
     std::cin >> itemNum;

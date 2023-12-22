@@ -26,13 +26,14 @@ void Sketch::setCanvas(std::shared_ptr<AbstractCanvas> acp)
 
 void Sketch::draw() const
 {
+  m_acp->drawCaption();
   std::for_each(m_items.begin(), m_items.end(), [this](const auto &item){item->draw(*m_acp);});
 }
 
 
 void Sketch::delLast()
 {
-  if(m_items.empty()) {m_items.pop_back();}
+  if(!m_items.empty()) {m_items.pop_back();}
 }
 
 
