@@ -5,17 +5,20 @@
 
 
 /**
-*  @brief implements canvas for the text-mode
-*  That is a Viewer from MVC pattern (another viewer is class Menu).
+*  @brief implements canvas (only std::cout output)
+*  That is a Viewer from MVC pattern.
 *  */
 
-class TextCanvas: public AbstractCanvas
+class TextCanvas final: public AbstractCanvas
 {
 public:
-      /** @brief draw caption */
-  void drawCaption() override
+      /** @brief draw caption
+       * @param x X coordinate
+       * @param y Y coordinate
+       * @param txt text to draw */
+  void drawText([[maybe_unused]] int x, [[maybe_unused]] int y, const std::string &txt) override
   {
-    std::cout << "\nCanvas\n******\n";
+    std::cout << txt;
   }
 
     /** @brief draw line

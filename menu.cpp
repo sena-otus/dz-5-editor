@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <iostream>
+#include <sstream>
 
 
 unsigned Menu::addItem(std::string &&itemtext, const CB &callback)
@@ -19,9 +20,17 @@ void Menu::show()
     std::cout << ii << ": " << m_item[ii].first << "\n";
   }
   std::cout << "Input number: ";
+}
+
+void Menu::processUserInput(const std::string &userInput)
+{
   unsigned itemNum = m_item.size();
-  do {
-    std::cin >> itemNum;
-  } while (itemNum >= m_item.size());
+  std::istringstream ss(userInput);
+  ss >> itemNum;
+  if(!ss || itemNum >= m_item.size())
+  {
+    std::cout << "Bad input" << std::endl;
+    return;
+  }
   m_item[itemNum].second();
 }

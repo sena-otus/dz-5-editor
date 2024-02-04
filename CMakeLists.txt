@@ -38,7 +38,7 @@ if(WITH_TEST)
     find_package(GTest REQUIRED)
     enable_testing()
 
-    add_executable(gtest_editor gtest_editor.cpp)
+    add_executable(gtest_editor gtest_editor.cpp sketch.cpp line.cpp circle.cpp)
 
     set_target_properties(gtest_editor PROPERTIES
         CXX_STANDARD 20
@@ -46,7 +46,8 @@ if(WITH_TEST)
     )
 
     target_link_libraries(gtest_editor
-	GTest::gtest_main
+      GTest::gtest_main
+      Boost::serialization
     )
 
     gtest_discover_tests(gtest_editor)

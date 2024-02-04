@@ -17,17 +17,10 @@ void SketchModel::addCircle(v2d &&center, const double R, const int lineColor)
   m_items.push_back(std::make_shared<Circle>(std::forward<v2d>(center), R, lineColor));
 }
 
-
-void SketchModel::setCanvas(std::shared_ptr<AbstractCanvas> acp)
+void SketchModel::draw(AbstractCanvas & ac) const
 {
-  m_acp = std::move(acp);
-}
-
-
-void SketchModel::draw() const
-{
-  m_acp->drawCaption();
-  std::for_each(m_items.begin(), m_items.end(), [this](const auto &item){item->draw(*m_acp);});
+  ac.drawText(0, 0, "\nCanvas\n******\n" );
+  std::for_each(m_items.begin(), m_items.end(), [&ac](const auto &item){item->draw(ac);});
 }
 
 

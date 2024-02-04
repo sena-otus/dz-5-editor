@@ -5,6 +5,9 @@
 #include <boost/serialization/access.hpp>
 #include <utility>
 
+/**
+* Abstract base class for all 2d objects.
+*  */
 class Item2d
 {
 public:
@@ -17,16 +20,23 @@ public:
 
   explicit Item2d(int lineColor) : m_lineColor(lineColor) {}
 
+    /** getter to access line color */
   int lineColor() const {return m_lineColor;}
 
+    /** Draw the item on provided canvas.
+     * Every item should implement it.
+     * @param ac canvas to draw
+     * */
   virtual void draw(AbstractCanvas &ac) const = 0;
 
+    /** grant access for boost serialization */
   friend class boost::serialization::access;
+    /**  boost serialization */
   template<class Archive>
   void serialize(Archive & ar, const unsigned int version	[[maybe_unused]])
   {
     ar & m_lineColor;
   }
 private:
-  int m_lineColor;
+  int m_lineColor; //!< line color
 };

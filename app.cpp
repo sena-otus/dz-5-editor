@@ -20,7 +20,6 @@ AppCtrl::AppCtrl()
   m_menu.addItem("Delete last added", [this] {delLast     ();});
   m_menu.addItem("Exit"             , [this] {appexit     ();});
   m_tcanvasptr = std::make_shared<TextCanvas>();
-  m_sketch.setCanvas(m_tcanvasptr);
 }
 
 int AppCtrl::randomInt()
@@ -39,6 +38,7 @@ void AppCtrl::importSketch()
   std::ifstream ifs(m_fname);
   boost::archive::text_iarchive ia(ifs);
   ia >> m_sketch;
+  std::cout << "impored from '" << m_fname << "'" << std::endl;
 }
 
 void AppCtrl::exportSketch()
@@ -46,29 +46,22 @@ void AppCtrl::exportSketch()
   std::ofstream ofs(m_fname);
   boost::archive::text_oarchive oa(ofs);
   oa << m_sketch;
+  std::cout << "exported to '" << m_fname << "'" << std::endl;
 }
 
 void AppCtrl::addLine()
 {
     // simulate input from user by random generator
-  const int x1 = randomInt();
-  const int y1 = randomInt();
-  const int x2 = randomInt();
-  const int y2 = randomInt();
   const int color = randomInt();
-
-  m_sketch.addLine(v2d{.x=x1,.y=y1}, v2d{.x=x2,.y=y2}, color);
+  m_sketch.addLine(v2d{.x=randomInt(),.y=randomInt()}, v2d{.x=randomInt(),.y=randomInt()}, color);
 }
 
 void AppCtrl::addCircle()
 {
     // simulate input from user by random generator
-  const int x1 = randomInt();
-  const int y1 = randomInt();
   const int R = randomInt();
   const int color = randomInt();
-
-  m_sketch.addCircle(v2d{.x=x1,.y=y1}, R, color);
+  m_sketch.addCircle(v2d{.x=randomInt(),.y=randomInt()}, R, color);
 }
 
 void AppCtrl::delLast()
@@ -84,7 +77,11 @@ void AppCtrl::appexit()
 void AppCtrl::run()
 {
   while(!m_exitFlag) {
-    m_sketch.draw();
+    m_sketch.draw(*m_tcanvasptr);
     m_menu.show();
+
+    std::string userInput;
+    std::cin >> userInput;
+    m_menu.processUserInput(userInput);
   }
 }

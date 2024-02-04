@@ -6,6 +6,7 @@
 
 class AbstractCanvas;
 
+/** Circle item */
 class Circle : public Item2d
 {
 public:
@@ -24,8 +25,8 @@ public:
   }
 
 private:
-   v2d m_center{};
-   int m_R{};
+  v2d m_center{}; //!< center coordinate
+  int m_R{}; //!< radius
 };
 
 BOOST_CLASS_EXPORT_KEY(Circle);

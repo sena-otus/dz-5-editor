@@ -7,7 +7,6 @@
 
 /**
  * @brief Menu widget
- * That is Viewer from MVC patter (another Viewer is class TextCanvas) .
  *  */
 class Menu
 {
@@ -23,10 +22,16 @@ public:
   unsigned addItem(std::string &&itemtext, const CB &callback);
 
     /**
-     * @brief display menu and get user input
+     * @brief display menu
      * */
   void show();
 
+
+    /**
+     * @brief process user input
+     * @param userInput str with user input
+     * */
+  void processUserInput(const std::string &userInput);
 private:
   std::vector<std::pair<std::string, CB>> m_item; ///! list of menu items and corresponding callbacks
 };

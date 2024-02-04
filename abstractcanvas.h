@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 /**
  * @brief abstract interface to graphical device.
  * Real class must implement drawing functions
@@ -7,11 +9,16 @@
 class AbstractCanvas
 {
 public:
-    /** @brief destructor better be virtual for the base class */
+  AbstractCanvas() = default;
+  AbstractCanvas(const AbstractCanvas &) = default;
+  AbstractCanvas(AbstractCanvas &&) = default;
+  AbstractCanvas& operator=(const AbstractCanvas &) = default;
+  AbstractCanvas& operator=(AbstractCanvas &&) = default;
+     /** @brief destructor better be virtual for the base class */
   virtual ~AbstractCanvas() = default;
 
-    /** @brief draw caption */
-  virtual void drawCaption() = 0;
+    /** @brief draw text */
+  virtual void drawText(int x, int y, const std::string &txt) = 0;
 
     /** @brief draw line
      *  @param x1 starting pixel X coordinate

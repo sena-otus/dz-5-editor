@@ -37,7 +37,7 @@ private:
   std::shared_ptr<TextCanvas> m_tcanvasptr;
   SketchModel m_sketch;
   bool m_exitFlag{false};
-  std::random_device m_rd;     // Only used once to initialise (seed) engine
-  std::mt19937 m_rng;    // Random-number engine used (Mersenne-Twister in
-  std::uniform_int_distribution<int> m_uniDistr;
+  std::random_device m_rd;     ///! Only used once to initialise (seed) engine
+  std::mt19937 m_rng;    ///! Random-number engine used (Mersenne-Twister)
+  std::uniform_int_distribution<int> m_uniDistr; ///! produces random ints, uniformly distributed on the interval
 };
