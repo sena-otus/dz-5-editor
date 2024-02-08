@@ -6,6 +6,7 @@
 
 class AbstractCanvas;
 
+/** @brief Line item */
 class Line : public Item2d
 {
 public:

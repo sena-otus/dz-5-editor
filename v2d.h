@@ -1,6 +1,6 @@
 #pragma once
 
-/** 2d vector */
+/** @brief 2d vector */
 struct v2d
 {
   int x{0}; //!< x component

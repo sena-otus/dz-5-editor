@@ -6,7 +6,7 @@
 #include <utility>
 
 /**
-* Abstract base class for all 2d objects.
+* @brief Abstract base class for all 2d objects.
 *  */
 class Item2d
 {

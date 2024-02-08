@@ -6,7 +6,7 @@
 
 class AbstractCanvas;
 
-/** Circle item */
+/** @brief Circle item */
 class Circle : public Item2d
 {
 public:
