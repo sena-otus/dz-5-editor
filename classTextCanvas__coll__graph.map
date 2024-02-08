@@ -1,0 +1,5 @@
+<map id="TextCanvas" name="TextCanvas">
+<area shape="rect" id="Node000001" title="implements canvas (only std::cout output) That is a Viewer from MVC pattern." alt="" coords="17,79,108,105"/>
+<area shape="rect" id="Node000002" href="$classAbstractCanvas.html" title="abstract interface to graphical device. Real class must implement drawing functions" alt="" coords="5,5,120,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,46,65,79,60,79,60,46"/>
+</map>

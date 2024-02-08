@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classAbstractCanvas.html" title="abstract interface to graphical device. Real class must implement drawing functions" alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000001" href="$classTextCanvas.html" title="implements canvas (only std::cout output) That is a Viewer from MVC pattern." alt="" coords="168,5,258,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="135,16,167,16,167,21,135,21"/>
+</map>

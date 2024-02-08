@@ -1,0 +1,7 @@
+<map id="Item2d" name="Item2d">
+<area shape="rect" id="Node000001" title="Abstract base class for all 2d objects." alt="" coords="39,5,101,31"/>
+<area shape="rect" id="Node000002" href="$classCircle.html" title="Circle item." alt="" coords="5,79,60,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,46,41,80,36,77,54,43"/>
+<area shape="rect" id="Node000003" href="$classLine.html" title="Line item." alt="" coords="84,79,130,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,43,103,77,99,80,81,46"/>
+</map>

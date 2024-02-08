@@ -1,0 +1,35 @@
+<map id="abstractcanvas.h" name="abstractcanvas.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="273,5,393,31"/>
+<area shape="rect" id="Node000002" href="$circle_8cpp.html" title=" " alt="" coords="5,226,82,252"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,37,207,53,152,78,101,111,78,131,59,154,50,172,46,191,45,226,40,226,40,191,45,170,55,151,75,127,98,107,150,73,205,49,257,32"/>
+<area shape="rect" id="Node000003" href="$gtest__editor_8cpp.html" title="Test editor." alt="" coords="282,153,395,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="336,47,340,152,335,152,331,47"/>
+<area shape="rect" id="Node000004" href="$item2d_8h.html" title=" " alt="" coords="208,79,279,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="308,43,260,81,257,77,304,39"/>
+<area shape="rect" id="Node000010" href="$sketch_8h.html" title=" " alt="" coords="370,79,440,105"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="357,40,395,77,391,80,354,44"/>
+<area shape="rect" id="Node000013" href="$tcanvas_8h.html" title=" " alt="" coords="464,79,541,105"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="377,35,474,76,472,81,375,40"/>
+<area shape="poly" id="edge8_Node000004_Node000003" title=" " alt="" coords="273,112,324,150,321,154,270,117"/>
+<area shape="rect" id="Node000005" href="$app_8cpp.html" title=" " alt="" coords="417,226,483,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="248,119,255,149,271,177,304,202,343,218,382,228,417,233,416,239,381,234,341,223,302,206,267,180,250,151,242,121"/>
+<area shape="rect" id="Node000006" href="$circle_8h.html" title=" " alt="" coords="68,153,131,178"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="207,114,125,154,123,150,204,109"/>
+<area shape="rect" id="Node000008" href="$line_8h.html" title=" " alt="" coords="155,153,207,178"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="225,118,193,154,189,150,221,115"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="83,192,55,228,51,224,79,189"/>
+<area shape="rect" id="Node000007" href="$sketch_8cpp.html" title=" " alt="" coords="116,226,200,252"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="121,189,150,224,146,228,117,192"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="175,194,165,227,159,225,170,192"/>
+<area shape="rect" id="Node000009" href="$line_8cpp.html" title=" " alt="" coords="224,226,290,252"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="207,187,246,224,242,228,203,191"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="385,118,351,154,347,150,382,114"/>
+<area shape="poly" id="edge17_Node000010_Node000007" title=" " alt="" coords="416,119,419,150,416,166,408,180,329,202,201,231,200,226,328,196,405,176,411,164,413,150,411,120"/>
+<area shape="rect" id="Node000011" href="$app_8h.html" title=" " alt="" coords="471,153,523,178"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="434,112,483,150,480,154,431,117"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="483,193,460,227,456,224,479,190"/>
+<area shape="rect" id="Node000012" href="$main_8cpp.html" title="Exercise 5, vector editor." alt="" coords="507,226,580,252"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="515,190,538,224,533,227,511,193"/>
+<area shape="poly" id="edge19_Node000013_Node000005" title=" " alt="" coords="525,116,540,146,542,163,538,179,527,196,512,209,481,228,479,224,509,205,523,192,533,177,537,163,535,147,520,118"/>
+<area shape="poly" id="edge20_Node000013_Node000011" title=" " alt="" coords="503,120,500,152,495,152,497,120"/>
+</map>
